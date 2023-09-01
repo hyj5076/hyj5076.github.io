@@ -1,9 +1,10 @@
 
 $(document).ready(function(){ //문서준비이벤트 시작
-  // modal popup
+ // modal popup
   $('.nav').hide();
 
   $('.modal').click(function(){
+
     $('#wrap').hide();
     $('.nav').fadeIn(200);
   });
@@ -12,7 +13,6 @@ $(document).ready(function(){ //문서준비이벤트 시작
     $('#wrap').show();
     $('.nav').fadeOut(200);
   });
-
 
   // 예약취소화면 안내창
   $('.popup').hide();

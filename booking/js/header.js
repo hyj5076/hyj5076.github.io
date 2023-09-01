@@ -3,8 +3,8 @@
 // ====================================
 
 const headerContents = {
-    logo: '/images/logo.png',
-    headerLink: '/index.html',
+    logo: '/booking/images/logo.png',
+    headerLink: '/booking/index.html',
 }
 
 function headerCommon(txt) {
