@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eight Fore</title>
+
+    <!-- 절대경로 -->
+    <base href="https://hyj5076.github.io/booking/">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
+    <!-- css -->
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/sub.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- js -->
+    <script src="/js/jquery-3.6.1.min.js"></script>
+    <script src="/js/script.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header0" class="active">
+            <div class="container">
+                <div class="inner spacebetween">
+                    <h1><a href="/index.html"><img src="/images/logo.png" alt="로고"></a></h1>
+                    <p class="modal"><a href="#"><i class="bi bi-justify"></i></a></p>
+                </div><!--inner-->
+            </div><!--container-->
+        </header>
+
+        <div id="main">
+            <section id="title">
+                <div class="inner center">
+                    <h3>reservation</h3>
+                </div><!-- inner -->
+            </section>
+
+            <section id="title_3step">
+                <div class="nav_reserv inner">
+                    <ul>
+                        <li class="active"><i class="bi bi-1-circle-fill"></i><p>객실선택</p><i class="bi bi-chevron-compact-right"></i></li>
+                        <li><i class="bi bi-2-circle-fill"></i><p>옵션선택</p><i class="bi bi-chevron-compact-right"></i></li>
+                        <li><i class="bi bi-3-circle-fill"></i><p>예약·결제</p></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="title2" class="active">
+                <div class="booking_fixed">
+                    <div class="inner">
+                        <div class="booking_box2">
+                            <ul>
+                                <li>
+                                    <p>Date</p>
+                                    <p><input type="date"> - <input type="date"> &nbsp;&nbsp;&nbsp; 1박</p>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <p>Adult</p>
+                                    <p>2</p>
+                                </li>
+                                <li>
+                                    <p>kid</p>
+                                    <p>0</p>
+                                </li>
+                            </ul>
+                        </div><!-- booking_box2 -->
+                    </div><!-- inner -->
+                </div><!-- booking -->
+            </section>
+
+            <section id="content">
+                <div class="content_reserv back_gray">
+                    <div class="booking booking_js active">
+                        <div class="inner">
+                            <div class="booking_box2">
+                                <ul>
+                                    <li>
+                                        <p>Date</p>
+                                        <p><input type="date"> - <input type="date"> &nbsp;&nbsp;&nbsp; 1박</p>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <p>Adult</p>
+                                        <p>2</p>
+                                    </li>
+                                    <li>
+                                        <p>kid</p>
+                                        <p>0</p>
+                                    </li>
+                                </ul>
+                            </div><!-- booking_box -->
+
+                            <div class="booking_box">
+                                <div>
+                                <p>Roomtype<p>
+
+                                <select class="select_box">
+                                    <option selected>전체룸타입</option>
+                                    <option>더블룸</option>
+                                    <option>트윈룸</option>
+                                    <option>트리플룸</option>
+                                    <option>패밀리룸</option>
+                                    <option>단체룸</option>
+                                    <option>키즈룸</option>
+                                </select>
+                                </div>
+                            </div>
+        
+                            <div class="btn_short">
+                                <div class="btn0">
+                                    <a href="#">검색하기</a>
+                                </div>
+                            </div>
+                        </div><!-- inner -->
+                    </div><!-- booking -->
+                </div><!-- content_reserv -->
+            </section>
+
+            <section id="content">
+                <div class="content_list">
+                    <div class="roomlist">
+                        <div class="inner">
+                            <p>객실8</p>
+                            <div class="roomlist_img">
+                                <img src="/images/sub/room_double.jpg" alt="더블룸">
+                            </div><!-- roomlist0_img -->
+
+                            <div class="roomlist_txt">
+                                <a href="#"><i class="bi bi-heart-fill"></i></a>
+                                <h3>Double Room</h3>
+                                <p class="name">더블룸</p>
+                                <p>60㎡/2층/옵션</p>
+                                <h4>280,000 <span>￦~</span></h4>
+                                <p>1박/세금별도</p>
+                            </div><!-- roomlist0_txt -->
+
+                            <div class="btn">
+                                <a href="/sub/room_2reserv_2.3.html">예약하기</a>
+                            </div><!-- btn -->
+                        </div><!-- inner -->
+                    </div><!-- roomlist -->
+
+                    <div class="roomlist">
+                        <div class="inner">
+                            <div class="roomlist_img">
+                                <img src="/images/sub/room_double.jpg" alt="더블룸">
+                            </div><!-- roomlist0_img -->
+
+                            <div class="roomlist_txt">
+                                <a href="#"><i class="bi bi-heart-fill"></i></a>
+                                <h3>Double Room, Valley</h3>
+                                <p class="name">더블룸, 계곡뷰</p>
+                                <p>82㎡/5층/욕조</p>
+                                <h4>310,000 <span>￦~</span></h4>
+                                <p>1박/세금별도</p>
+                            </div><!-- roomlist0_txt -->
+
+                            <div class="btn">
+                                <a href="/sub/room_2reserv_2.3.html">예약하기</a>
+                            </div><!-- btn -->
+                        </div><!-- inner -->
+                    </div><!-- roomlist -->
+                </div>
+            </section>
+        </div><!-- main -->
+
+        <footer id="footer">
+        </footer>
+    </div><!-- wrap -->
+
+    <div id="navCommonMain" class="nav">
+    </div><!--nav-->
+
+    <script src="/js/footer.js"></script>
+    <script src="/js/nav.js"></script>
+</body>
+</html>

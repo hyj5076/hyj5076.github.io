@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eight Fore</title>
+
+    <!-- 절대경로 -->
+    <base href="https://hyj5076.github.io/booking/">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
+    <!-- css -->
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/sub.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- js -->
+    <script src="/js/jquery-3.6.1.min.js"></script>
+    <script src="/js/script.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+        </header>
+
+        <div id="main">
+            <section id="title">
+                <div class="inner center">
+                    <h3>reservation</h3>
+                </div>
+            </section>
+
+            <section id="title_3step">
+                <div class="nav_reserv inner">
+                    <ul>
+                        <li><i class="bi bi-1-circle-fill"></i><p>객실선택</p><i class="bi bi-chevron-compact-right"></i></li>
+                        <li><i class="bi bi-2-circle-fill"></i><p>옵션선택</p><i class="bi bi-chevron-compact-right"></i></li>
+                        <li class="active"><i class="bi bi-3-circle-fill"></i><p>예약·결제</p></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="content">
+                <div class="content_detail back_gray">
+                    <div class="reserv">
+                        <div class="reserv_cart max_inner">
+                            <ul>
+                                <li>
+                                    <p>더블룸,가든뷰</p>
+                                    <p>1객실</p>
+                                </li>
+                                <li>
+                                    <p>2023.03.10 - 2023.03.11</p>
+                                    <p>옵션없음</p>
+                                    <p><span>320,000 ￦</span></p>
+                                </li>
+                                <li>
+                                    <p>1박</p>
+                                    <!-- <p><a href="#">옵션변경</a></p> -->
+                                    <p></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- reserv -->
+                </div>
+            </section>
+
+            <section id="content">
+                <div class="content_detail back_gray">
+                    <div class="content_form">
+                        <div class="inner">
+                            <div class="reserv_form">
+                                <h4>예약자결제정보</h4>
+
+                                <div class="reserv_list">
+                                    <p>GENDER</p>
+                                    <form class="rl_1">
+                                        <div><input type="radio"> 남</div>
+                                        <div><input type="radio"> 여</div>
+                                    </form>
+                                </div>
+
+                                <div class="reserv_list">
+                                    <p>RESERVATION NAME</p>
+                                    <form class="rl_2">
+                                        <div><input id="" class="input1" type="text" placeholder="성함(국문)을 입력해주세요."></div>
+                                    </form>
+                                </div>
+
+                                <div class="reserv_list">
+                                    <p>ENGLISH NAME</p>
+                                    <form class="rl_1">
+                                        <div><input id="" class="input1" type="text" size="50" placeholder="FAMILY NAME(성)"></div>
+                                        <div><input id="" class="input1" type="text" size="50" placeholder="FIRST NAME(이름)"></div>
+                                    </form>
+                                </div>
+
+                                <div class="reserv_list">
+                                    <p>DATE OF BIRTH</p>
+                                    <form>
+                                        <div><input id="" class="input0" type="date" value="2023-03-20"></div>
+                                    </form>
+                                </div>
+
+                                <div class="reserv_list">
+                                    <p>PHONE NUMBER</p>
+                                    <form>
+                                        <div><input id="" class="input2" type="tel" size="10" pattern="[0-9]{3}" required>
+                                             - <input id="" class="input2" type="tel" size="10" pattern="[0-9]{4}" required>
+                                              - <input id="" class="input2" type="tel" size="10" pattern="[0-9]{4}" required></div>
+                                    </form>
+                                </div>
+
+                                <div class="reserv_list">
+                                    <p>E-MAIL</p>
+                                    <form class="rl_2">
+                                        <div><input id="" class="input1" type="email" pattern=".+@globex\.com"></div>
+                                    </form>
+                                </div>
+                            </div><!-- reserv_form -->
+                        </div><!-- inner -->
+                    </div><!-- content_form -->
+
+                    <div class="content_form">
+                        <div class="inner">
+                            <div class="reserv_form">
+                                <h4>개인정보 수집·이용 동의</h4>
+
+                                <div class="reserv_list">
+                                    <ul class="rl_3">
+                                        <li>
+                                            <input type="radio"> [필수] 개인정보 수집·이용에 동의합니다.
+                                            <div class="agree">
+                                                <ul>
+                                                    <li><i class="bi bi-dot"></i>개인정보수집이용동의서 내용</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <input type="radio"> [필수] 만 14세 이상입니다.
+                                        </li>
+                                    </ul>
+
+                                    <p class="at">*위 개인정보 수집·이용에 대한 동의를 거부할 수 있으나, 객실 예약이 불가합니다.</p>
+                                </div><!-- reserv_list -->
+                            </div>
+                        </div>
+                    </div><!-- content_form -->
+
+                    <div class="content_form">
+                        <div class="inner">
+                            <div class="reserv_form">
+                                <h4>취소 규정</h4>
+
+                                <div class="reserv_list">
+                                    <ul class="rl_3">
+                                        <li>
+                                            <input type="radio"> [필수] 취소 및 노쇼(NO-SHOW)규정에 동의합니다.
+                                            <div class="agree">
+                                                <ul>
+                                                    <li><i class="bi bi-dot"></i>숙박 예정일 1일 전 18시 이전 위약금 없이 취소 및 변경 가능</li>
+                                                    <li><i class="bi bi-dot"></i>숙박 예정일 1일 전 18시 이후 취소/변경 및 노쇼(NO-SHOW)발생 시</li>
+                                                    <li>&nbsp;&nbsp;&nbsp; -2박 이상 투숙 고객은 최초 객실료 1박 위약금이 부과</li>
+                                                    <li>&nbsp;&nbsp;&nbsp; -1박 투숙 고객 요금의 1박 요금의 80% 위약금이 부과</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                    <p class="at">*위 노쇼(NO-SHOW) 규정에 대한 동의를 거부할 수 있으나, 객실 예약이 불가합니다.</p>
+                                </div><!-- reserv_list -->
+                            </div>
+                        </div>
+                    </div><!-- content_form -->
+
+                    <div class="content_form">
+                        <div class="inner">
+                            <div class="reserv_form bord2">
+                               <div class="price">
+                                        <div>
+                                    <h4>총 결제금액</h4>
+                                    <h5><span>320,000</span> KRW</h5>
+                                        </div>
+                               </div>
+                            </div>
+                        </div>
+                    </div><!-- content_form -->
+
+                    <div class="btn_short">
+                        <div class="btn0">
+                            <a href="room_3reserv_1.4.html">결제하기</a>
+                        </div><!-- btn -->
+                    </div>
+                </div>
+            </section>
+        </div><!-- main -->
+
+        <footer id="footer">
+        </footer>
+    </div><!-- wrap -->
+
+    <div id="navCommonMain" class="nav">
+    </div><!--nav-->
+
+    <script src="/js/header.js"></script>
+    <script src="/js/footer.js"></script>
+    <script src="/js/nav.js"></script>
+</body>
+</html>

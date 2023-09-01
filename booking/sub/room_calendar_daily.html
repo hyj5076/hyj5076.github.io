@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eight Fore</title>
+
+    <!-- 절대경로 -->
+    <base href="https://hyj5076.github.io/booking/">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
+    <!-- css -->
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/sub.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- js -->
+    <script src="/js/jquery-3.6.1.min.js"></script>
+    <script src="/js/script.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+        </header>
+
+        <div id="main">
+            <section id="title">
+                <div class="inner">
+                    <h3>reservation</h3>
+
+                    <select class="select_box">
+                        <option selected>예약현황</option>
+                        <option>예약하기</option>
+                        <option>예약확인 및 취소</option>                        
+                    </select>
+                </div><!-- inner -->
+            </section>
+
+            <section id="title_reserv">
+                <div class="nav_reserv inner">
+                    <ul>
+                        <li><a href="#">Gramping</a></li>
+                        <li class="active"><a href="/sub/room_1reserv_1.2.html">Room</a></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="content">
+                <div class="content_main">
+                    <div class="calendar">
+                        <div class="inner">
+                            <div class="calendar_title">
+                                <div class="cal_btn">
+                                    <ul>
+                                        <li><a href="/sub/room_calendar_monthly.html">월간</a></li>
+                                        <li class="active"><a href="/sub/room_calendar_daily.html">일간</a></li>
+                                    </ul>
+                                </div>
+                                <div class="cal_txt">
+                                    <div>
+                                        <i class="bi bi-chevron-left"></i>
+                                        <h4>2023. 03. 10</h4>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </div>
+                                </div>
+                                <p>오늘날짜 : 2023. 03. 08</p>
+                            </div>
+
+                            <div class="calendar_table">
+                                <div class="cal_ox">
+                                    <div>
+                                        <p class="o">예약가능</p>
+                                        <p class="x">예약불가</p>
+                                    </div>
+                                </div>
+
+                                <div class="cal_table_day">
+                                    <table>
+                                        <tr>
+                                            <th><p>금요일</p></th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="cal_list">
+                                                    <ul>
+                                                        <li>
+                                                            <p><a href="room_1reserv_2.2.html">더블룸</a></p>
+                                                            <p>[5/10]</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><a href="">트윈룸</a></p>
+                                                            <p>[7/10]</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="x"><a href=""></a><span>트리플룸</span></p>
+                                                            <p></p>
+                                                        </li>
+                                                        <li>
+                                                            <p><a href="#">패밀리룸</a></p>
+                                                            <p>[6/8]</p>
+                                                        </li>
+                                                        <li>
+                                                            <p><a href="#">단체룸</a></p>
+                                                            <p>[10/12]</p>
+                                                        </li>
+                                                        <li>
+                                                            <p class="x"><a href=""></a><span>키즈룸</span></p>
+                                                            <p></p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div><!-- inner -->
+                    </div><!-- calendar -->
+                </div>
+            </section>
+
+        </div><!-- main -->
+
+        <footer id="footer">
+        </footer>
+    </div><!-- wrap -->
+
+    <div id="navCommonMain" class="nav">
+    </div><!--nav-->
+
+    <script src="/js/header.js"></script>
+    <script src="/js/footer.js"></script>
+    <script src="/js/nav.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,2371 @@
+@charset "utf-8";
+
+/* ==========================================================================
+    Tabel Of Contents
+   ========================================================================== 
+   1.Common
+   2.Interactive-inner
+   3.root
+   4.Header
+   5.Nav
+   6.Menu
+   7.Main
+   8.Footer
+*/
+
+
+/* ==========================================================================
+    font-family: 'Cinzel', serif;
+    font-family: 'Glegoo', serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Stardos Stencil', cursive;
+   ==========================================================================
+*/
+
+
+/*===========================================================
+    1. common 
+  ===========================================================
+*/
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.5;
+    font-size: 1.4rem;
+}
+
+#wrap {
+    overflow: hidden;
+    color: #000;
+}
+
+h1 img {
+    height: 50px;
+}
+
+h2, h3 {
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+}
+
+p {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 300;
+}
+
+a, img {
+    display: block;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* ==========================================================================
+    2.Interactive
+   ==========================================================================
+*/
+
+.inner {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+    @media (max-width:700px) {
+        .inner {
+            max-width: calc(100% - 0px);
+        }
+    }
+
+/* 꽉 찬 속 */
+.max_inner {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+
+/* ==========================================================================
+    3.root 
+   ==========================================================================
+*/
+
+:root {
+    /* 색깔 */
+    --positive: rgba(0, 102, 17, 0.2);
+    --negative: rgba(129, 1, 1, 0.2);
+    --possibble: green;
+    --impossible: red;
+
+    --yellowcolor : #E97E00;
+    --yellowopacity : rgba(233,126,0,0.1);
+
+    --black : #333333;
+
+    --graylight : #f5f5f5;
+    --graysemilight : #eeeeee;
+    --graysemistrong : #d2d2d2;
+    --graystrong : #aaaaaa;
+    --graytypeB : #6B6B6B;
+
+    --navgray : #aaaaaa;
+
+    --aboutus : #41b1b9;
+
+    /* 폰트사이즈 */
+    --title : 2.4rem;
+    --titlemain : 3rem;
+
+    --largeicon : 3rem;
+
+    --large: 2rem;
+    --medium: 1.6rem;
+    --small: 1.2rem;
+}
+
+
+/*===========================================================================
+    4.Header
+  ===========================================================================
+*/
+
+#header {
+    position: fixed;
+    width: 100%;
+    background: rgba(255,255,255,0.8);
+    z-index: 9999;
+}
+
+#header h1 img {
+    width: auto;
+    height: 50px;
+}
+
+    /* reserv1.2 액티브 효과 주기*/
+
+    #header0 {
+        position: fixed;
+        width: 100%;
+        background: rgba(255,255,255,0.8);
+        z-index: 9999;
+        transition: 0.5s;
+        transform: translateY(0);
+    }
+
+    #header0.active {
+        transform: translateY(-51px);
+    }
+
+.container {
+    border-bottom: rgba(0,0,0,0.6) 1px solid;
+}
+
+    .container p i {
+        font-size: var(--largeicon);
+    }
+
+
+/* ==========================================================================
+    5.Navigation 
+   ==========================================================================
+*/
+
+.nav {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    font-size: var(--medium);
+    background-color: #fff;
+    z-index: 99999;
+    overflow: hidden;
+}
+
+.nav a {
+    color: #333;
+}
+
+.nav_title {
+    background: #eee;
+}
+
+.nav_title h2 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.nav_header {
+    width: 100%;
+    background-color: #333;
+    border-bottom: #eee 1px solid;
+}
+
+    .close i {
+        color: var(--navgray);
+        font-size: var(--largeicon);
+    }
+
+    .back i {
+        color: var(--navgray);
+        font-size: var(--largeicon);
+    }
+
+.nav_title > ul {
+    display: flex;
+    padding: 15px 0;
+    border-bottom: var(--navgray) 1px solid;
+    justify-content: center;
+}
+
+    .border-right {
+        border-right: rgba(0,0,0,0.4) 1px solid;
+    }
+
+.nav_title > ul > li {
+    width: calc(100%/3);
+    text-align: center;
+}
+
+.nav_title li a {
+    padding: 10px 0;
+}
+
+.nav_login {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.nav_login a {
+    padding: 5px 0;
+    border-radius: 50px;
+    width: 120px;
+    text-align: center;
+    border: rgba(0,0,0,0.4) 1px solid;
+    background-color: #fff;
+    color: #666;
+}
+
+.nav_login a:hover {
+    background-color: #333;
+}
+
+
+/* ==========================================================================
+    6.Menu 
+   ==========================================================================
+*/
+
+.menu {
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.menu h3 {
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid #d2d2d2;
+}
+
+.menu > ul {
+    position: relative;
+}
+
+.menu > ul > li {
+    width: 50%;
+    background: #eee;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+}
+
+.menu > ul > li:last-child {
+    border: 0;
+}
+
+.menu > ul > li > a {
+    padding: 20px 0;
+}
+
+.menu > ul > li.active > a {
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+.submenu {
+    position: absolute;
+    top: 10px; left: 55%;
+    font-size: 1.6rem;
+    text-align: left;
+}
+
+.submenu > li > a {
+    padding: 14px 0;
+    color: #666;
+}
+
+
+/* ==========================================================================
+    7.Main : 공통
+   ==========================================================================
+*/
+
+/* ---------------------------------------- 
+    [공통] 상단 선택 박스 select box 
+    [공통] 글램핑/룸/기타 예약버튼 
+   ---------------------------------------- */
+
+#title {
+    margin-top: 50px;
+    border-bottom: #d2d2d2 1px solid;
+    background-color: #fff;
+}
+
+#title .inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+#title .center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#title h2 {
+    font-size: 3.6rem;
+}
+
+#title h3 {
+    font-size: var(--title);
+    padding: 20px 10px 20px 0;
+}
+
+    .select_box {
+        width: 100%;
+        border: 0;
+        border-radius: 0;
+        background-color: #fff;
+        color: #333333;
+        text-align-last: center; /* select 기능 시 꼭 필요! */
+        font-size: 1.4rem;
+    }
+
+    
+/* ---------------------------------------- 
+    [공통] 각 상세페이지 : 타이틀 
+   ---------------------------------------- */
+
+.content_main {
+    margin: 30px 0;
+}
+
+.content_title h3 {
+    font-size: var(--titlemain);
+}
+
+.content_title p {
+    padding: 10px 0;
+}
+
+
+/* ---------------------------------------- 
+    [공통] css 효과 
+   ---------------------------------------- */
+
+   /* 정렬 */
+   .spacebetween {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; 
+    }
+
+    .left {
+        text-align: left;
+    }
+
+    .right {
+        text-align: right;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    /* 배경색 */
+    .back_white {
+        background-color: #fff;
+    }
+
+    .back_black {
+        background-color: #000;
+    }
+
+    .back_gray {
+        background-color: #eee;
+    }
+
+    /* 선색 */
+    .bord_bottom_black {
+        border-bottom: #000 1px solid;
+    }
+
+    .bord_bottom_gray {
+        border-bottom: #d2d2d2 1px solid;
+    }
+
+    /* 버튼 */
+        /* 하얀 버튼 */
+        .btn > a {
+            background-color: #fff;
+            transition: background 0.4s;
+            padding: 10px 0;
+            text-align: center;
+            border: #000 1px solid;
+        }
+        
+        /* 까만 버튼 */
+        .btn0 > a {
+            padding: 10px 0;
+            color: #fff;
+            background: #000;
+            text-align: center;
+            border: #000 1px solid;
+        }
+
+        /* 짧은 버튼 */
+        .btn_short {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        
+            .btn_short .btn, 
+            .btn_short .btn0 {
+                width: calc(100%/3);
+            }
+
+        /* 긴 버튼 */
+        .btn_long {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        
+            .btn_long .btn, 
+            .btn_long .btn0 {
+                width: 100%;
+            }
+
+
+/* ==========================================================================
+    7.Main : 예약시스템
+   ==========================================================================
+*/
+
+/* ---------------------------------------- 
+    [공통] 예약시스템 타이틀 : 예약현황
+    
+    room_reserv0.1 - 3.4
+   ---------------------------------------- */
+
+
+#title_reserv {
+    border-bottom: #000 1px solid;
+}
+
+.nav_reserv ul {
+    display: flex;
+    padding: 12px 0;
+    border-bottom: #fff 1px solid;
+    justify-content: center;
+}
+
+.nav_reserv li {
+    width: calc(100%/3);
+    text-align: center;
+}
+
+.nav_reserv li a {
+    padding: 8px 0;
+    border-right: #d2d2d2 1px solid;
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: #aaaaaa;
+}
+
+.nav_reserv li.active a {
+    color: #000;
+}
+
+.nav_reserv li:last-child a {
+    border: 0;
+}
+
+
+/* ---------------------------------------- 
+    [공통] 예약현황 : 캘린더 일/월 
+   ---------------------------------------- */
+
+/* 캘린더 타이틀 */
+
+.calendar {
+    margin: 20px 0;
+}
+
+.calendar_title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.calendar_title .cal_btn {
+    display: flex;
+    justify-content: center;
+}
+
+.calendar_title .cal_btn > ul {
+    display: flex;
+}
+
+.calendar_title .cal_btn > ul a {
+    padding: 2px 25px;
+    background-color: #d2d2d2;
+    border-radius: 30px;
+    margin: 0 15px;
+}
+
+.calendar_title .cal_btn li.active a {
+    color: #fff;
+    background-color: #000;
+}
+
+.calendar_title .cal_txt {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.calendar_title .cal_txt > div {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+/* 캘린더 테이블 */
+
+.calendar_table {
+    width: 100%;
+}
+
+.calendar_table .cal_ox {
+    padding: 5px 0;
+}
+
+.calendar_table .cal_ox > div {
+    display: flex;
+}
+
+.calendar_table .cal_ox p.o {
+    margin-right: 10px;
+}
+
+.calendar_table .cal_ox p.o::before {
+    content: '●';
+    color: var(--positive);
+    font-size: 1.1rem;
+    margin: 2px 5px;
+}
+
+.calendar_table .cal_ox p.x::before {
+    content: '●';
+    color: var(--negative);
+    font-size: 1.1rem;
+    margin: 2px 5px;
+}
+
+/* [공통]캘린더 테이블 */
+
+table {
+    border: #aaaaaa 1px solid;
+}
+
+th {
+    border: #aaaaaa 1px solid;
+    background: #eeeeee;
+}
+
+table th p {
+    padding: 2px 4px;
+    font-weight: 400;
+    color: #333333;
+    font-size: 1.4rem;
+}
+
+table td p {
+    padding: 2px 4px;
+    font-weight: 400;
+    color: #333333;
+    font-size: 1.8rem;
+}
+
+table p span {
+    color: rgb(255, 0, 0);
+}
+
+table p {
+    display: flex;
+}
+
+
+/* ---------------------------------------- 
+    예약현황 : 캘린더 월별
+
+    room_reserv0.1 : cal_table_month
+   ---------------------------------------- */
+
+.cal_table_month td {
+    border: #aaaaaa 1px solid;
+    height: 70px;
+    width: calc(100%/7);
+    position: relative;
+}
+
+.cal_table_month table td {
+    background-color: var(--positive);
+    font-size: 1.1rem;
+    margin: 2px 5px;
+}
+
+.cal_table_month table td.x {
+    background-color: var(--negative);
+    margin: 2px 5px;
+}
+
+.cal_table_month table td.a {
+    background-color: #eee;
+    margin: 2px 5px;
+}
+
+.cal_table_month td p {
+    position: absolute;
+    top: 0;
+}
+
+
+/* ---------------------------------------- 
+    예약현황 : 캘린더 일별
+
+    room_reserv0.2 : cal_table_day
+   ---------------------------------------- */
+
+.cal_table_day table td p:first-child:before {
+    content: '●';
+    color: var(--possibble);
+    font-size: 1.1rem;
+    margin: 2px 5px;
+}
+
+.cal_table_day table td p.x:first-child:before {
+    content: '●';
+    color: var(--impossible);
+    margin: 2px 5px;
+}
+
+.cal_table_day td {
+    border: #d2d2d2 1px solid;
+    width: 100%;
+}
+
+.cal_table_day th {
+    border: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.cal_list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.cal_list li {
+    width: 180px;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cal_list span {
+    text-decoration: line-through;
+    color: #aaaaaa;
+}
+
+
+/* ---------------------------------------- 
+    [공통] 예약시스템 타이틀 : 예약하기, 확인
+    
+    room_reserv2.1 - 3.4
+   ---------------------------------------- */
+
+#title_3step .nav_reserv li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #aaaaaa;
+}
+
+#title_3step .nav_reserv li p {
+    font-weight: 500;
+}
+
+#title_3step .nav_reserv li i {
+    padding-right: 5px;
+}
+
+#title_3step .nav_reserv li.active {
+    color: #000;
+}
+
+    .bi-chevron-compact-right {
+        position: absolute;
+        right: -15px;
+    }
+
+
+/* ---------------------------------------- 
+    예약시스템 내용 : 예약박스
+    
+    room_reserv2.1 - 3.4
+   ---------------------------------------- */
+
+.content_reserv {
+    padding: 10px 0 .1px;
+}
+
+.booking_box {
+    width: 100%;
+    border: #d2d2d2 1px solid;
+    padding: 15px 0;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    text-align: center;
+}
+
+    .booking_box p {
+        font-weight: 400;
+    }
+
+    .booking_box > ul {
+        padding: 0 15px;
+    }
+
+        .booking_box > ul:first-child {
+            width: 60%;
+        }
+
+        .booking_box > ul:last-child {
+            width: 40%;
+            border-left: #d2d2d2 solid 1px;
+            display: flex;
+            align-items: center;
+        }
+
+        .booking_box > ul > li {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            padding: 5px 0;
+        }
+
+        .booking_box > ul > li p span {
+            font-size: 1.8rem;
+            padding-right: 4px;
+        }
+
+    .booking_box > div {
+        padding: 15px 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .count_btn {
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+        border-radius: 5px;
+        border: #d2d2d2 1px solid;
+    }
+
+.booking .btn a {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 10px 0;
+    border: #000 1px solid;
+    background-color: #fff;
+}
+
+
+/* booking_box2 : reserv2.2 ver2 */
+
+.booking_box2 {
+    width: 100%;
+    border: #d2d2d2 1px solid;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+    .booking_box2 p {
+        font-weight: 400;
+        padding: 2.5px 0;
+    }
+
+    .booking_box2 > ul {
+        padding: 0 10px;
+    }
+
+        .booking_box2 > ul > li {
+            padding: 5px 0;
+        }
+
+        .booking_box2 > ul:last-child > li:last-child {
+            padding-left: 20px;
+            text-align: center;
+        }
+
+        .booking_box2 > ul:last-child {
+            display: flex;
+            align-items: center;
+        }
+
+.back_gray {
+    background-color: var(--graysemilight);
+}
+
+.bord0 {
+    border: 0;
+    background-color: rgba(0,0,0,0);
+}
+
+.bord1 {
+    border-right: 0;
+    border-left: 0;
+}
+
+
+/* ---------------------------------------- 
+    예약하기 : 예약 가능한 방 리스트
+
+    room_reserv1.2
+   ---------------------------------------- */
+
+.roomlist {
+    margin-bottom: 50px;
+}
+
+    .roomlist:last-child {
+        margin-bottom: 0;
+    }
+
+.roomlist p {
+    padding-bottom: 5px;
+}
+
+.roomlist .btn {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.roomlist_img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.roomlist_img img {
+    width: 100%;
+    height: auto;
+}
+
+.roomlist_txt {
+    position: relative;
+    border: #aaaaaa solid 1px;
+    border-top: 0;
+    padding: 20px 15px;
+}
+
+.roomlist_txt > a i {
+    font-size: 2rem;
+    position: absolute;
+    right: 20px;
+    color: #d2d2d2;
+}
+
+.roomlist_txt > a:focus i {
+    font-size: 2rem;
+    position: absolute;
+    right: 20px;
+    color: #000;
+}
+
+.roomlist_txt h4 {
+    padding-top: 20px;
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: 'Glegoo', serif;
+}
+
+.roomlist_txt h4 span {
+    font-size: 1.6rem;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+    .name {
+        font-weight: 400;
+        font-size: 1.6rem;
+    }
+
+    .none {
+        color: rgba(0,0,0,0);
+    }
+
+
+/* ---------------------------------------- 
+    상단바 예약박스 고정 / js효과
+
+    room_reserv1.2
+   ---------------------------------------- */
+
+
+#title2 .booking_fixed {
+    display: none;
+}
+
+#title2.active .booking_fixed {
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0; left: 0;
+    background-color: #fff;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+}
+
+.booking_js {
+    display: block;
+}
+
+.booking_js.active .inner {
+    display: none;
+}
+
+
+/* ---------------------------------------- 
+    예약하기 : 옵션선택
+
+    room_reserv2.1
+   ---------------------------------------- */
+
+.booking_option {
+    width: 100%;
+    border: #d2d2d2 1px solid;
+    margin: 10px 0;
+    display: flex;
+    background-color: #fff;
+}
+
+.option {
+    width: 100%;
+}
+
+.option > ul {
+    padding: 0 10px;
+}
+
+.option .o_menu > li {
+    width: 100%;
+    border-bottom: #d2d2d2 1px solid;
+    position: relative;
+    text-align: center;
+}
+
+.option .o_menu > li > a {
+    padding: 18px 0;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #333;
+
+}
+
+.option .o_menu > li:last-child {
+    border-bottom: 0;
+}
+
+.option .o_menu > li > a i {
+    position: absolute;
+    right: 10px;
+    color: #d2d2d2;
+}
+
+.option .o_submenu {
+    padding: 15px 10px;
+}
+
+.option .o_submenu > li {
+    text-align: left;
+    padding: 5px;
+    position: relative;
+}
+
+.option .o_submenu > li span {
+    padding-left: 20px;
+    font-weight: 400;
+}
+
+    .count {
+        display: flex;
+        position: absolute;
+        top: 0; right: 0;
+    }
+
+    .count p {
+        padding: 5px 15px;
+    }
+
+    .count i {
+        color: #aaaaaa;
+        font-size: 2rem;
+    }
+
+    .append {
+        padding: 10px 0;
+    }
+
+    .append p {
+        padding: 2.5px 0;
+        font-size: 1.2rem;
+        color: #333;
+    }
+
+
+/* ---------------------------------------- 
+    예약폼 인풋 input
+
+    room_reserv2.3
+   ---------------------------------------- */
+
+.input0 {
+    width: 100%;
+    height: 40px;
+    border: #e2e2e2 1px solid;
+    text-align: center;
+    padding: 0 10px;
+    border-radius: 0;
+}
+
+.input1 {
+    width: 100%;
+    height: 40px;
+    border-bottom: #e2e2e2 1px solid;
+    border-radius: 0;
+}
+
+.input2 {
+    width: calc((100% - 23px)/3);
+    height: 40px;
+    border-bottom: #e2e2e2 1px solid;
+    text-align: center;
+    padding: 0 10px;
+    border-radius: 0;
+}  
+
+/* #option = choice */
+
+#choice {
+    padding: 15px 10px;
+    border: #e2e2e2 1px solid;
+}
+
+
+/* ---------------------------------------- 
+    예약확인 및 취소
+
+    room_reserv3.1 - 3.4
+   ---------------------------------------- */
+
+.reserv {
+    margin: 10px 0;
+    width: 100%;
+}
+
+    .deco_underline {
+        text-decoration: underline;
+    }
+
+.reserv h3 {
+    font-size: var(--title);
+}
+
+.reserv > div > p:nth-child(3) {
+    padding: 20px 0;
+}
+
+.reserv_confirm {
+    border-top: #d2d2d2 1px solid;
+    margin-bottom: 10px;
+}
+
+.reserv_confirm > div {
+    padding: 10px;
+}
+
+.reserv_confirm > div > ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reserv_confirm > div > ul > li {
+    padding: 5px 0;
+}
+
+.reserv_confirm span {
+    padding-right: 10px;
+    font-weight: 500;
+    color: #333;
+}
+
+.reserv_confirm i {
+    margin: 0 10px;
+}
+
+/* reserv_confirm > reserv_box */
+
+.reserv_box {
+    background-color: #eeeeee;
+    border-bottom: #d2d2d2 1px solid;
+}
+
+    .reserv_box a {
+        text-decoration: underline;
+    }
+
+    .font {
+        font-family: 'Cinzel', serif;
+    }
+
+.reserv_box p {
+    padding: 5px 0;
+}
+
+    .back_white {
+        background-color: #fff;
+    }
+
+
+/* ---------------------------------------- 
+    예약시스템 - 예약내역 장바구니 카트
+
+    room_reserv2.1 - 3.4
+   ---------------------------------------- */
+
+
+.reserv_cart {
+    background-color: #fff;
+    border-top: #d2d2d2 1px solid;
+    border-bottom: #d2d2d2 1px solid;
+    padding: 20px 0;
+}
+
+.reserv_cart ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.reserv_cart p {
+    padding: 5px 0;
+}
+
+.reserv_cart p span {
+    font-weight: 600;
+    font-size: var(--medium);
+}
+
+.reserv_cart i {
+    padding: 0 10px;
+}
+
+    /* reserv 2.2 */
+    .moreroom {
+        background-color: #fff;
+        text-align: center;
+        border-bottom: #d2d2d2 1px solid;
+        padding: 5px 0 10px;
+    }
+
+    .moreroom i {
+        font-size: 2rem;
+    }
+
+
+/* ---------------------------------------- 
+    예약확인 및 취소 > 예약상세정보
+
+    room_reserv2.3
+   ---------------------------------------- */
+
+.reserv_form > .price {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.reserv_form > .price > div {
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.reserv_form > .price > div > h4 {
+    border-right: #aaaaaa solid 1px;
+    padding: 10px 20px;
+}
+
+.reserv_form > .price > div > h5 span {
+    font-size: 2.4rem;
+    padding-right: 10px;
+}
+
+.reserv_list form > div {
+    padding: 5px 0;
+}
+
+    /* 룸 리스트 하위 폼 양식 */
+    .rl_1 div {
+        width: calc((100% - 10px)/2);
+    }
+
+    .rl_2 div {
+        width: 100%;
+    }
+
+    .rl_3 div {
+        display: block;
+    }
+
+    /* 기타문의사항 */
+    .rl_4 {
+        width: 100%;
+        height: 100px;
+        border: #aaaaaa 1px solid;
+    }
+
+    /* 옵션선택 */
+    .rl_5 {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+/* ---------------------------------------- 
+    예약시스템 : 예약확인 및 취소 화면
+
+    reserv3.3 
+   ---------------------------------------- */
+
+.reserv_detail {
+    width: 100%;
+    margin: 10px 0;
+    background-color: #fff;
+    border: #d2d2d2 1px solid;
+}
+
+.reserv_detail h4 {
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    border-bottom: #d2d2d2 1px solid;
+    font-weight: 400;
+}
+
+    .rd_0 {
+        border-bottom: #d2d2d2 1px solid;
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .rd_0 p {
+        padding: 0 10px;
+    }
+
+    .rd_1 > div {
+        padding: 20px 10px;
+    }
+
+    .rd_1 > div > p {
+        padding: 5px 0;
+    }
+
+    .rd_1 > ul {
+        padding: 5px 10px;
+    }
+
+    .rd_1 > ul > li {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+
+    .rd_1 > ul > li span {
+        padding-left: 40px;
+    }
+
+    .rd_1_price p {
+        font-weight: 600;
+    }
+
+    .rd_1_price span {
+        font-size: 2rem;
+    }
+
+.reserv_detail .btn a {
+    background-color: #000;
+    color: #fff;
+}
+
+
+/* ---------------------------------------- 
+    예약확인 및 취소 > 예약상세정보
+   ---------------------------------------- */
+
+   /* content > content_detail > 
+   reserv_confirm > reserv_box 
+   */
+
+.content_detail {
+    width: 100%;
+    padding: 10px 0 .1px;
+}
+
+.content_detail h4 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* ---------------------------------------- 
+    단체 예약 신청서 : 타이틀 
+    
+    room_reserv2.3 예약결제
+    group_reserv1.1 단체예약
+   ---------------------------------------- */
+
+.content_group {
+    padding: 10px 0;
+}
+
+.content_txt {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content_txt h4 {
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.content_txt a {
+    text-decoration: underline;
+    display: inline;
+}
+
+/* 고객문의 */
+
+.content_call {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.content_call p {
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+.content_call > div {
+    padding: 20px 0;
+    background-color: #fff;
+    position: relative;
+}
+
+.content_call .telicon {
+    position: absolute;
+    top: 50%; 
+    right: 50px;
+    transform: translateY(-50%);
+    background-color: #eeeeee;
+    border-radius: 1000px;
+    width: 60px; height: 60px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content_call i {
+    font-size: 2.4rem;
+}
+
+    #question {
+        width: 100%;
+        border: #d2d2d2 1px solid;
+    }
+
+
+
+/* ---------------------------------------- 
+    단체 예약 신청서 : 세부 양식 
+    
+    group_reserv1.1 단체예약
+   ---------------------------------------- */
+
+.reserv_form {
+    width: 100%;
+    border: #d2d2d2 1px solid;
+    padding: 10px 0 20px;
+    margin: 10px 0;
+    background-color: #fff;
+}
+
+.reserv_form h4 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.reserv_list {
+    width: 100%;
+    padding: 10px;
+}
+
+.reserv_list .rl_1, .rl_2, .rl_4 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reserv_list .rl_3 {
+    width: 100%;
+}
+
+.reserv_list .rl_3 input {
+    margin: 0 5px;
+}
+
+.reserv_list .rl_3 > li {
+    width: 100%;
+    border-bottom: #d2d2d2 1px solid;
+    padding: 15px 0;
+}
+
+    /* 단체 예약 폼 세부양식 */
+
+    .date {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .date > form {
+        width: 100%;
+    }
+
+    .date > form > div {
+        display: flex;
+        width: 100%;
+    }
+
+    .date  > form  > div p {
+        padding: 10px 5px;
+    }
+
+    .date  > div {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .date > div p {
+        width: 80%;
+        padding: 8px 0;
+        background-color: #eeeeee;
+        border: #d2d2d2 1px solid;
+    }
+
+    .agree {
+        padding: 15px;
+    }
+
+    .agree li {
+        font-size: 1.2rem;
+        color: #333333;
+        padding: 5px 0;
+    }
+
+        .at {
+            padding: 20px 0 0;
+            font-size: 1.2rem;
+        }
+
+    /* rl_depth0 = payment */
+    /* rl_depth1 = agree */
+
+    .payment {
+        padding-top: 10px;
+    }
+
+    .payment > ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+    }
+
+    .payment > ul > li {
+        width: calc((100% - 20px)/3);
+    }
+
+    .payment > ul > li > a {
+        width: 100%;
+        padding: 12px 0;
+        border: #aaaaaa 1px solid;
+        text-align: center;
+    }
+
+    .payment select {
+        width: 100%;
+    }
+
+    .payment li.active a {
+        background-color: #000;
+        color: #fff;
+        font-weight: 500;
+    }
+
+    .payment_price {
+        margin-top: 10px;
+    }
+
+    .payment_price > ul {
+        width: 100%;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        background-color: #eeeeee;
+        border: #d2d2d2 1px solid;
+    }
+
+        .bord2 {
+            border: #333 1px solid;
+        }
+
+
+/* ==========================================================================
+    7.Main : 상세페이지 / 기타
+   ==========================================================================
+*/
+    
+/* ------------------------------------------------- 
+    전체타입 리스트 : 룸타입, 실내시설, 야외시설 전체
+    
+    room / indoor / outdoor
+   ------------------------------------------------- */
+
+.content_list {
+    padding: 30px 0;
+    position: relative;
+}
+
+    .go {
+        position: absolute;
+        top: 30px; right: 0;
+    }
+
+    .go_left {  
+        position: absolute;
+        top: 30px; left: 0;
+    }
+
+.content_list h3 {
+    font-size: var(--titlemain);
+}
+
+.content_img {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.content_list .bi-arrow-right-short {
+    font-size: 3rem;
+}
+
+
+/* ------------------------------------------------- 
+    [공통]컨텐츠박스 : 어메니티, 안내사항, 오시는길
+
+    room_type / notice / waytocome
+   ------------------------------------------------- */
+
+.content_box {
+    margin: 50px 0;
+}
+
+.content_box:last-child {
+    margin: 50px 0 0;
+}
+
+.content_box h4  {
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
+.content_box .box {
+    border: #d2d2d2 1px solid;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.content_box .box > div {
+    width: 100%;
+    padding: 20px;
+    border-bottom: #d2d2d2 1px solid;
+}
+
+.content_box .box > div:last-child {
+   border: 0;
+}
+
+.content_box p {
+    padding: 6px 0;
+}
+
+
+/* ------------------------------------------------- 
+    컨텐츠박스 : 룸스펙 roomspec
+
+    room_type
+   ------------------------------------------------- */
+
+.roomspec .box {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.roomspec .box > div {
+    width: 30%;
+    padding: 10px;
+    border-right: #d2d2d2 1px solid;
+}
+
+.roomspec .box > div:last-child {
+    border: 0;
+}
+
+.roomspec .box > div h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.roomspec .box > div p {
+    padding: 5px 0;
+}
+
+.roomspec .box > div p span {
+    color: #d2d2d2;
+    padding: 0 5px;
+}
+
+
+/* ------------------------------------------------- 
+    컨텐츠박스 : 어메니티 amenity
+
+    room_type
+   ------------------------------------------------- */
+
+.amenity h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+    /* [javaScript] 어메니티 슬라이드 버튼 효과 */
+
+    .title_amenity {
+        cursor: pointer;
+        position: relative;
+    }
+
+    /* 폰트어썸 오류 */
+
+    .title_amenity:after {
+        content: '\f00c';
+        font-family: 'Font Awesome 5 Free','Font Awesome 5 Brands';
+        font-size: 3rem;
+        color: #000;
+        position: absolute;
+        right: 0; top: -10px;
+    }
+
+
+/* ------------------------------------------------- 
+    어메니티 슬라이드 버튼
+
+    room_type
+   ------------------------------------------------- */
+
+.title_amenity {
+    cursor: pointer;
+    position: relative;
+}  
+
+.content_btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0;
+}
+
+.content_btn > .btn {
+    width: calc(50% - 5px);
+}
+
+.content_btn > .btn > a {
+    width: 100%;
+}
+
+.content_btn > .btn:last-child > a {
+    margin-right: 0;
+}
+
+
+/* ------------------------------------------------- 
+    이용안내 : 에잇포레 소개 페이지 
+    
+    notice_aboutus
+   ------------------------------------------------- */
+
+/* 에잇포레 소개페이지 서브타이틀 */
+
+.content_title_sub {
+    margin: 30px 0;
+}
+
+.title_aboutus {
+    color: var(--aboutus);
+}
+
+.title_aboutus h2 {
+    font-family: 'Stardos Stencil', cursive;
+    font-size: 5rem;
+    margin: 0 20px 0 120px;
+}
+
+.title_aboutus > div {
+    display: flex;
+    align-items:center;
+}
+
+.title_aboutus .line  {
+    border-bottom: var(--aboutus) 1px solid;
+    width: 100%;
+}
+
+.title_aboutus h4 {
+    font-family: 'Stardos Stencil', cursive;
+    font-size: 3rem;
+    margin: 0 140px 0 20px;
+}
+
+    .keypoint {
+        position: relative;
+    }
+
+    .keypoint p {
+        position: absolute;
+        top: 40px; left: 20px;
+    }
+
+
+/* [공통] 에잇포레 소개페이지 콘텐츠 */
+
+.content_aboutus {
+    margin: 50px 0;
+    position: relative;
+}
+
+.content_aboutus:last-child {
+    margin: 50px 0 0;
+}
+
+.content_aboutus h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+
+/* [공통]에잇포레 소개페이지 콘텐츠 리스트 */
+
+
+
+    /* 상단 */
+
+    .top {
+        display: flex;
+        align-items:flex-end;
+    }
+
+    .top h2 {
+        font-family: 'Stardos Stencil', cursive;
+        font-size: 5rem;
+    }
+
+    .top h3 {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.8rem;
+        text-align: left;
+    }
+
+    .top > div {
+        width: 100%;
+    }
+
+        .top_left {
+            padding-left: 10px;
+        }
+
+        .top_right {
+            padding-right: 10px;
+        }
+
+    .top .line  {
+        border-bottom: #333 1px solid;
+    }
+
+    /* 하단 */
+
+    .bottom {
+        position: relative;
+    }
+
+    .bottom_img {
+        width: 100%;
+    }
+
+    .bottom_img img {
+        height: auto;
+    }
+
+    .bottom_txt {
+        padding-top: 10px;
+    }
+    
+    .bottom_txt p span {
+        font-weight: 400;
+    }
+
+        .graybox {
+            position: absolute;
+            bottom: -30px; left: 0;
+            z-index: -1;
+            width: 100vw;
+            height: 200px;
+            background-color: #eeeeee;
+        }
+
+        .english_right {
+            width: 300px;
+            text-align: right;
+            position: absolute;
+            top: 140px; right: -165px;
+            transform: rotate(-90deg);
+            color: #aaaaaa;
+            font-weight: 100;
+        }
+
+        .english_left {
+            width: 300px;
+            text-align: right;
+            position: absolute;
+            transform: rotate(-90deg);
+            top: 140px; left: -165px;
+            color: #aaaaaa;
+            font-weight: 100;
+        }
+
+
+/* [오른쪽]에잇포레 소개페이지 콘텐츠 리스트 */
+
+.aboutus_list_right {
+    padding-right: 50px;
+}
+
+.aboutus_list {
+    padding-left: 50px;
+}
+
+.top_right h3 {
+    text-align: right;
+}
+
+
+/* ------------------------------------------------- 
+    이용안내 : 에잇포레 오시는길 
+    
+    notice_way
+   ------------------------------------------------- */
+
+.box_address {
+    display: flex;
+    justify-content: space-between;
+}
+
+.box_address p a {
+    display: inline;
+    margin-left: 10px;
+}
+
+.box_address p i {
+    font-size: 2rem;
+}
+
+
+/* ------------------------------------------------- 
+    [공통] 기본 콘텐츠 양식 content_basic
+
+    -이용안내 : 갤러리 notice_gallery
+    -이용안내 : 주변놀거리 notice_attraction
+   ------------------------------------------------- */
+
+.content_basic {
+    margin: 50px 0;
+}
+
+.content_basic h4 {
+    font-size: var(--large);
+    color: var(--black);
+}
+
+.content_basic .content_img {
+    position: relative;
+}
+
+.content_basic .content_img i {
+    cursor: pointer;
+}
+
+.content_basic .content_img img {
+    height: auto;
+    object-fit: cover;
+}
+
+    .arrow_left {
+        position: absolute;
+        left: 5px; top: 50%;
+        transform: translateY(-50%);
+        color: rgba(255,255,255,0.8);
+    }
+
+    .arrow_right {
+        position: absolute;
+        right: 5px; top: 50%;
+        transform: translateY(-50%);
+        color: rgba(255,255,255,0.8);
+    }
+
+
+/* ------------------------------------------------- 
+    [공통] 카드형 콘텐츠 양식 content_basic > card
+
+    이용안내 : notice_event
+    단체연수후기 : group_review
+   ------------------------------------------------- */
+
+.content_basic .card {
+    border: #d2d2d2 1px solid;
+}
+
+.content_basic .card h4 {
+    padding: 30px 0 5px 10px;
+    font-size: 2.2rem;
+}
+
+.content_basic .card_img > div > div {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content_basic .card_img img {
+    width: auto;
+    height: 150%;
+    object-fit: cover;
+}
+
+.content_basic .card p {
+    padding: 10px;
+}
+
+    .card_date {
+        font-weight: 500;
+        padding: 5px 0 10px 10px;
+    }
+
+
+/* ------------------------------------------------- 
+    로그인 페이지 : 타이틀
+   ------------------------------------------------- */
+
+
+.login_title {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.login_title h2 {
+    padding: 20px 0;
+}
+
+.login_main {
+    background-color: #eeeeee;
+    text-align: center;
+    height: calc(100vh - 122px);
+}
+
+.login_name {
+    padding: 60px 0;
+}
+
+.login_btn {
+    width: 100%;
+    display: flex;
+}
+
+.login_btn ul {
+    width: 100%;
+}
+
+.login_btn > ul > li {
+    width: 100%;
+    border: #d2d2d2 1px solid;
+    margin-bottom: 10px;
+    height: 70px;
+    position: relative;
+    background-color: #fff;
+}
+
+.login_btn > ul > li > a {
+    width: 100%;
+    height: 100%;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_btn input {
+    width: 100%;
+    height: 70px;
+    padding-left: 20px;
+}
+
+.login_sns > ul {
+    display: flex;
+    justify-content: center;
+}
+
+.login_sns > ul > li {
+    margin: 0 10px;
+}
+
+.login_sns > ul > li > a {
+    text-decoration: underline;
+}
+
+.login_icon > ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.login_icon > ul > li {
+    margin: 0 10px;
+}
+
+.login_icon > ul > li a img {
+    width: 50px;
+    height: auto;
+}
+
+
+
+
+/* ------------------------------------------------- 
+    상세페이지 Btype 디자인
+
+    others
+   ------------------------------------------------- */
+
+.title_others {
+    display: flex;
+    text-align: left;
+    border-left: var(--yellowopacity) 15px solid;
+}
+
+.title_others h3 {
+    font-size: 2.6rem;
+    color: var(--yellowcolor);
+}
+
+.title_others p {
+    font-size: 1.4rem;
+    color: var(--graytypeB);
+}
+
+.title_others .border {
+    margin-left: 6px;
+    margin-right: 10px;
+    border-left: var(--yellowcolor) 1px solid;
+}
+
+    .type_others .btn {
+        border: #aaaaaa 1px solid;
+        padding: 6px 8px;
+    }
+
+    .type_others .btn a {
+        border: 0;
+        background-color: #f5f5f5;
+        color: var(--graytypeB);
+        padding: 5px 0;
+        font-weight: 500;
+    }
+
+.others_spec > ul {
+    display: flex;
+    border: #d2d2d2 1px solid;
+    padding: 10px 20px;
+}
+
+.others_spec > ul > li {
+    width: 50%;
+}
+
+.others_spec > ul > li:first-child p {
+    font-family: 'Cinzel', serif;
+    font-size: var(--medium);
+    padding: 2px 0;
+    margin: 13px 0;
+}
+
+.others_spec > ul > li:nth-child(2) > p {
+    padding: 2px 10px;
+    margin: 15px 0;
+    border-left: #f5f5f5 8px solid;
+}
+
+.others_notice {
+    position: relative;
+    color: var(--graytypeB);
+    border: #d2d2d2 1px solid;
+    margin: 30px 0;
+}
+
+.others_notice > div {
+    padding: 20px;
+}
+
+.others_notice h4 {
+    position: absolute;
+    top: -25px; left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #fff;
+    font-size: var(--large);
+    color: var(--graytypeB);
+}
+
+.others_notice p {
+    padding: 5px 0;
+}
+
+
+/* ---------------------------------------- 
+    팝업창 
+   ---------------------------------------- */
+
+.popup { 
+    position: fixed; 
+    z-index: 99999;
+    top: 0; left: 0; 
+    width: 100%; height: 100%;
+    overflow: hidden; 
+    background: rgb(0,0,0,0.8); 
+}
+
+.popbox { 
+    position: absolute; 
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%); 
+    width: calc(100% - 60px);
+    background: #fff; 
+}
+
+.popbox ul {
+    width: 100%;
+    display: flex;
+}
+
+.popbox ul li {
+    width: 50%;
+    background-color: #000;
+    border-right: #aaaaaa 1px solid;
+}
+
+.popbox ul li:last-child {
+    border: 0;
+}
+
+.popbox ul li a {
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.popbox_cancel h4 { 
+    text-align: center;
+    padding: 40px 0 10px; 
+}
+
+.popbox_txt {
+    padding: 20px 40px 30px;
+}
+
+
+/* ==========================================================================
+    8.Footer 
+   ==========================================================================
+*/
+
+#footer {
+    border-top: #000 1px solid;
+}
+
+.footer_h1 {
+    border-bottom: #d2d2d2 1px solid;
+    height: 50px;
+    display: flex;
+}
+
+.footer_h1 p {
+    padding: 15px;
+}
+
+.footer_h1 img {
+    width: auto;
+    height: 50px;
+}
+
+
+/* company */
+
+.company {
+    margin: 30px 0;
+}
+
+.company p {
+    padding: 5px 0;
+}
+
+
+/* gnb */
+
+.gnb {
+    margin: 30px 0;
+}
+
+.gnb > ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gnb > ul > li {
+    padding: 5px 0;
+}
+
+
+/* copy */
+
+.copy {
+    padding: 10px 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy p {
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+
+/* 오류 content_list_txt ??? */
+/* .content_txt {
+    width: 100%;
+}
+
+.content_txt > .btn > a {
+    width: 100%;
+    margin-top: 10px;
+} */
+
+    /* 오류 */
+    /* #h_sub {
+        border-bottom: #000 solid 1px;
+    } */
+    /*오류 .con_02 {
+    width: 100%;
+    border-bottom: #000 1px solid;
+} */

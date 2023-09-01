@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eight Fore</title>
+
+    <!-- 절대경로 -->
+    <base href="https://hyj5076.github.io/booking/">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
+    <!-- css -->
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/sub.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- js -->
+    <script src="/js/jquery-3.6.1.min.js"></script>
+    <script src="/js/script.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+        </header>
+
+        <div id="main">
+            <section id="title">
+                <div class="inner">
+                    <h3>reservation</h3>
+
+                    <select class="select_box">
+                        <option selected>예약현황</option>
+                        <option>예약하기</option>
+                        <option>예약확인 및 취소</option>                        
+                    </select>
+                </div><!-- inner -->
+            </section>
+
+            <section id="title_reserv">
+                <div class="nav_reserv inner">
+                    <ul>
+                        <li><a href="#">Gramping</a></li>
+                        <li class="active"><a href="/sub/room_1reserv_1.2.html">Room</a></li>
+                        <li><a href="#">Others</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="content">
+                <div class="content_main">
+                    <div class="calendar">
+                        <div class="inner">
+                            <div class="calendar_title">
+                                <div class="cal_btn">
+                                    <ul>
+                                        <li class="active"><a href="/sub/room_calendar_monthly.html">월간</a></li>
+                                        <li><a href="/sub/room_calendar_daily.html">일간</a></li>
+                                    </ul>
+                                </div>
+                                <div class="cal_txt">
+                                    <div>
+                                        <i class="bi bi-chevron-left"></i>
+                                        <h4>2023. 03</h4>
+                                        <i class="bi bi-chevron-right"></i>
+                                    </div>
+                                </div>
+                                <p>오늘날짜 : 2023. 03. 08</p>
+                            </div>
+
+                            <div class="calendar_table">
+                                <div class="cal_ox">
+                                    <div>
+                                        <p class="o"></i>예약가능</p>
+                                        <p class="x"></i>예약불가</p>
+                                    </div>
+                                </div>
+
+                                <div class="cal_table_month">
+                                    <table>
+                                        <tr>
+                                            <th><p><span>일</span></p></th>
+                                            <th><p>월</p></th>
+                                            <th><p>화</p></th>
+                                            <th><p>수</p></th>
+                                            <th><p>목</p></th>
+                                            <th><p>금</p></th>
+                                            <th><p>토</p></th>
+                                        </tr>
+                                        <tr>
+                                            <td class="a"></td>
+                                            <td class="a"></td>
+                                            <td class="a"></td>
+                                            <td class="x"><p><span>1</span></p></td>
+                                            <td><p>2</p></td>
+                                            <td><p>3</p></td>
+                                            <td><p>4</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><p><span>5</span><a href=""></i></a></p></td>
+                                            <td><p>6</p></td>
+                                            <td><p>7</p></td>
+                                            <td><p>8</p></td>
+                                            <td><p>9</p></td>
+                                            <td><p>10<a href="/sub/room_calendar_daily.html"></i></a></p></td>
+                                            <td><p>11</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><p><span>12</span><a href=""></i></a></p></td>
+                                            <td><p>13</p></td>
+                                            <td><p>14</p></td>
+                                            <td><p>15</p></td>
+                                            <td><p>16</p></td>
+                                            <td><p>17</p></td>
+                                            <td class="x"><p>18</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><p><span>19</span><a href=""></i></a></p></td>
+                                            <td><p>20</p></td>
+                                            <td><p>21</p></td>
+                                            <td><p>22</p></td>
+                                            <td><p>23</p></td>
+                                            <td><p>24</p></td>
+                                            <td><p>25</p></td>
+                                        </tr>
+                                        <tr>
+                                            <td><p><span>26</span><a href=""></i></a></p></td>
+                                            <td><p>27</p></td>
+                                            <td><p>28</p></td>
+                                            <td><p>29</p></td>
+                                            <td><p>30</p></td>
+                                            <td><p>31</p></td>
+                                            <td class="a"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div><!-- calendar_title -->
+                        </div><!-- inner -->
+                    </div><!-- calendar -->
+                </div><!-- content_sub0 -->
+            </section>
+        </div><!-- main -->
+
+        <footer id="footer">
+        </footer>
+    </div><!-- wrap -->
+
+    <div id="navCommonMain" class="nav">
+    </div><!--nav-->
+
+    <script src="/js/header.js"></script>
+    <script src="/js/footer.js"></script>
+    <script src="/js/nav.js"></script>
+
+</body>
+</html>
