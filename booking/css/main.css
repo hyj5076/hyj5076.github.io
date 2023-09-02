@@ -320,6 +320,7 @@ i {
 }
 
 .main_part {
+    position: relative;
     display: flex;
     justify-content: center;
     font-size: 1.4rem;
@@ -360,6 +361,26 @@ i {
     padding: 10px 0;
     border: #000 1px solid;
 }
+
+/* checkpoint 사용성 */
+
+.check_point {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00123fb9;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px 20px 20px 0;
+}
+
+.check_point i {
+    font-size: 2rem;
+    margin-left: 5px;
+}
+
+
 
 /* ------------------------------------------------- 
     [메인] 상단 콘텐츠 타이틀
@@ -533,7 +554,7 @@ i {
 .scroll i {
     font-size: 2.6rem;
     margin-bottom: 20px;
-    color: #00123fa7;
+    color: #00123fb9;
 }
 
 @keyframes scrollMotion {

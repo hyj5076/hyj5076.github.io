@@ -13,6 +13,19 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// ====================================
+//  close event
+// ====================================
+
+window.addEventListener('load', function() {
+    const closeButton = document.getElementById('closeButton');
+    closeButton.addEventListener('click', function() {
+        const checkPoint = document.querySelector('.check_point');
+        checkPoint.style.display = 'none';
+    });
+});
+
+
 
 // ====================================
 //  버튼 스위치하여 콘텐츠 내용 바꾸기
@@ -121,7 +134,7 @@ const contentIndividual = [
         description: "에잇포레에서 자연과 함께하는 최고의 하루를 보내세요.",
         image: "/booking/images/valley.jpg",
         alt: "계곡",
-        link: "/booking/sub/notice_attraction.html",
+        link: "/booking/sub/notice_aboutus.html",
         linkText: "상계폭포 자세히보기"
     },
     {
@@ -129,7 +142,7 @@ const contentIndividual = [
         description: "에잇포레의 글램핑장에서 바베큐를 즐겨보세요.",
         image: "/booking/images/glamping.jpg",
         alt: "글램핑",
-        link: "",
+        link: "/booking/sub/notice_aboutus.html",
         linkText: "글램핑 자세히보기"
     },
     {
