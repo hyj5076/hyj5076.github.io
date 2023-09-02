@@ -15,10 +15,40 @@ window.addEventListener('scroll', () => {
 
 
 // ====================================
+//  버튼 스위치하여 콘텐츠 내용 바꾸기
+// ====================================
+
+function changeText(event) {
+    event.preventDefault(); 
+    const type = event.target.getAttribute('data-type');
+    
+    switch (type) {
+        case '개인':
+            renderMainTitleByIndex(0);
+            renderContents(contentIndividual);
+            break;
+        case '단체':
+            renderMainTitleByIndex(1);
+            renderContents(contentGroup);
+            break;
+        case '글램핑':
+            renderMainTitleByIndex(2);
+            renderContents(contentGlamping);
+            break;
+        default:
+            break;
+    }
+}
+
+
+// ====================================
 //  main Title Button active
 // ====================================
 
 document.querySelectorAll('.main_part a').forEach(link => {
+    // 리스트 아이템의 모든 <a> 태그에 이벤트 리스너 추가
+    link.addEventListener('click', changeText);
+
     link.addEventListener('click', function(event) {
         // 링크의 기본 동작을 막기 위함
         event.preventDefault();
@@ -36,7 +66,7 @@ document.querySelectorAll('.main_part a').forEach(link => {
 
 
 // ====================================
-//  main Title
+//  main Title 콘텐츠 내용 바꾸기
 // ====================================
 
 const mainTitleContents = [
@@ -80,35 +110,9 @@ function renderMainTitleByIndex(index) {
     mainTitle(mainTitleData);
 }
 
-function changeText(event) {
-    event.preventDefault(); 
-    const type = event.target.getAttribute('data-type');
-    
-    switch (type) {
-        case '개인':
-            renderMainTitleByIndex(0);
-            renderContents(contentIndividual);
-            break;
-        case '단체':
-            renderMainTitleByIndex(1);
-            renderContents(contentGroup);
-            break;
-        case '글램핑':
-            renderMainTitleByIndex(2);
-            renderContents(contentGlamping);
-            break;
-        default:
-            break;
-    }
-}
-
-// 리스트 아이템의 모든 <a> 태그에 이벤트 리스너 추가
-document.querySelectorAll('.main_part a').forEach(link => {
-    link.addEventListener('click', changeText);
-});
 
 // ====================================
-//  main Contents
+//  main Contents 콘텐츠 내용 바꾸기
 // ====================================
 
 const contentIndividual = [

@@ -365,7 +365,7 @@ i {
     [메인] 상단 콘텐츠 타이틀
    ------------------------------------------------- */
 
-#main_content {
+#mainContent {
     margin: 80px 0 40px;
 }
 
@@ -526,13 +526,14 @@ i {
     left: 50%;
     bottom: 20px;
     transform: translateX(-50%);
-    color: #02206d90;
+    color: #00123f;
     text-align: center;
 }
 
 .scroll i {
     font-size: 2.6rem;
     margin-bottom: 20px;
+    color: #00123fa7;
 }
 
 @keyframes scrollMotion {
@@ -541,7 +542,7 @@ i {
     100% { transform: translateY(0); }
 }
 
-.bi-arrow-down {
+.bi-arrow-down-circle-fill {
     display: inline-block;  /* 애니메이션 적용을 위해 block 또는 inline-block 요소로 설정 */
     animation: scrollMotion 1.4s infinite;  /* 1.5초 동안 애니메이션을 무한 반복 */
 }
