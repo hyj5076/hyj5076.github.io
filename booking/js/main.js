@@ -1,4 +1,20 @@
 // ====================================
+//  scroll event
+// ====================================
+
+const scrollElement = document.querySelector('.scroll');
+
+window.addEventListener('scroll', () => {
+    // 페이지가 일정량 이상 스크롤 되었을 때 fade out 효과 적용
+    if (window.scrollY > 30) {  // 30px 이상 스크롤 되었을 때. 원하는 값을 설정하십시오.
+        scrollElement.classList.add('fade-out');
+    } else {
+        scrollElement.classList.remove('fade-out');
+    }
+});
+
+
+// ====================================
 //  main Title Button active
 // ====================================
 
@@ -17,19 +33,51 @@ document.querySelectorAll('.main_part a').forEach(link => {
     });
 });
 
+
+
 // ====================================
 //  main Title
 // ====================================
 
 const mainTitleContents = [
-    "글램핑, 바베큐장, 계곡 등 자연친화적인 공간에서 사랑하는 사람들과 행복한 시간을 보내세요. <a href='/sub/notice_aboutus.html'>소개 바로가기</a>",
-    "체육대회, 단체 바베큐, 세미나 등 기업 연수를 에잇포레와 함께 하세요. <a href='/sub/notice_aboutus.html'>소개 바로가기</a>",
-    "계곡이 있는 글램핑장에서 멋진 하루를 보내세요. <a href='/sub/notice_aboutus.html'>소개 바로가기</a>"
+    {
+        mainTitle: "About 'Eight Fore'",
+        mainText: "글램핑, 바베큐장, 계곡 등 자연친화적인 공간에서 사랑하는 사람들과 행복한 시간을 보내세요.",
+        mainLink: "/sub/notice_aboutus.html"
+    },
+    {
+        mainTitle: "8fore for Group",
+        mainText: "체육대회, 단체 바베큐, 세미나 등 기업 연수를 에잇포레와 함께 하세요.",
+        mainLink: "/sub/notice_aboutus.html"
+    },
+    {
+        mainTitle: "Glamping & BBQ",
+        mainText: "계곡이 있는 글램핑장에서 멋진 하루를 보내세요.",
+        mainLink: "/sub/notice_aboutus.html"
+    },
 ];
 
+function mainTitle(txt) {
+    const mainID = document.getElementById('mainTitle');
+   
+    const mainHtml = `
+        <div class="inner">
+            <h2>${txt.mainTitle}</h2>
+            <div class="m_line inner"></div>
+            <div class="main_txt">
+                <p id="textContent">${txt.mainText}
+                <a href="${txt.mainLink}">소개 바로가기</a>
+                </p>
+            </div>
+        </div>
+    `;
+
+    mainID.innerHTML = mainHtml;
+}
+
 function renderMainTitleByIndex(index) {
-    const p = document.getElementById('textContent');
-    p.innerHTML = mainTitleContents[index];
+    const mainTitleData = mainTitleContents[index];
+    mainTitle(mainTitleData);
 }
 
 function changeText(event) {
@@ -39,15 +87,15 @@ function changeText(event) {
     switch (type) {
         case '개인':
             renderMainTitleByIndex(0);
-            renderContents(contents01);
+            renderContents(contentIndividual);
             break;
         case '단체':
             renderMainTitleByIndex(1);
-            renderContents(contents02);
+            renderContents(contentGroup);
             break;
         case '글램핑':
             renderMainTitleByIndex(2);
-            renderContents(contents03);
+            renderContents(contentGlamping);
             break;
         default:
             break;
@@ -63,7 +111,7 @@ document.querySelectorAll('.main_part a').forEach(link => {
 //  main Contents
 // ====================================
 
-const contents01 = [
+const contentIndividual = [
     {
         title: "The Valley",
         description: "에잇포레에서 자연과 함께하는 최고의 하루를 보내세요.",
@@ -90,7 +138,7 @@ const contents01 = [
     }
 ];
 
-const contents02 = [
+const contentGroup = [
     {
         title: "Sports Day",
         description: "에잇포레에서 체육대회 운동장과 소품을 대여해드립니다.",
@@ -117,7 +165,7 @@ const contents02 = [
     }
 ];
 
-const contents03 = [
+const contentGlamping = [
     {
         title: "The Valley",
         description: "에잇포레에서 자연과 함께하는 최고의 하루를 보내세요.",
@@ -147,7 +195,7 @@ const contents03 = [
 function renderContents(contentSet) {
     const container = document.getElementById('contentContainer');
 
-    const html = contentSet.map(content => `
+    const contentHtml = contentSet.map(content => `
         <div class="content">
             <div class="inner">
                 <div class="content_title">
@@ -169,10 +217,10 @@ function renderContents(contentSet) {
         </div>
     `).join('');
 
-    container.innerHTML = html;
+    container.innerHTML = contentHtml;
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    renderContents(contents01);
+    renderContents(contentIndividual);
     renderMainTitleByIndex(0);
 });
