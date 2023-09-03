@@ -86,17 +86,17 @@ const mainTitleContents = [
     {
         mainTitle: "About 'Eight Fore'",
         mainText: "글램핑, 바베큐장, 계곡 등 자연친화적인 공간에서 사랑하는 사람들과 행복한 시간을 보내세요.",
-        mainLink: "/sub/notice_aboutus.html"
+        mainLink: "/booking/sub/notice_aboutus.html"
     },
     {
         mainTitle: "8fore for Group",
         mainText: "체육대회, 단체 바베큐, 세미나 등 기업 연수를 에잇포레와 함께 하세요.",
-        mainLink: "/sub/notice_aboutus.html"
+        mainLink: "/booking/sub/notice_aboutus.html"
     },
     {
         mainTitle: "Glamping & BBQ",
         mainText: "계곡이 있는 글램핑장에서 멋진 하루를 보내세요.",
-        mainLink: "/sub/notice_aboutus.html"
+        mainLink: "/booking/sub/notice_aboutus.html"
     },
 ];
 
