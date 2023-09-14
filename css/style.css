@@ -356,6 +356,7 @@ h2 {
 .project_spec {
     box-shadow: var(--box-shadow-200);
     border: #fff 1px solid;
+    position: relative;
 }
 
 .project_spec .project_tool {
@@ -367,6 +368,13 @@ h2 {
 .project_spec .project_name {
     font-size: 2.2rem;
     padding-bottom: 5px;
+}
+
+.project_spec .percent {
+    font-size: var(--font-small);
+    position: absolute;
+    left: 15px;
+    bottom: 20px;
 }
 
 
