@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // input 입력칸 자동으로 넘김
     //---------------------------------------------
 
-    let dongInput = document.getElementById('dongInput');
-    let hoInput = document.getElementById('hoInput');
-    let nameInput = document.getElementById('nameInput');
+    const dongInput = document.getElementById('dongInput');
+    const hoInput = document.getElementById('hoInput');
+    const nameInput = document.getElementById('nameInput');
 
     // 동 -> 호
     if (dongInput) {
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //---------------------------------------------
     // 휴대폰 하이픈 자동 넣기
     //---------------------------------------------
-    let telInput = document.getElementById('telInput');
+    const telInput = document.getElementById('telInput');
 
     if (telInput) {
         telInput.addEventListener("input", function() {
@@ -107,8 +107,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // .agree 클래스의 아이콘 클릭 이벤트 핸들러
     //---------------------------------------------
 
-    let agreeIcon = document.querySelector('.agree i');
-    let activePopup = document.querySelector('.active-popup');
+    const agreeIcon = document.querySelector('.agree i');
+    const activePopup = document.querySelector('.active-popup');
 
     agreeIcon.addEventListener('click', function() {
       if (activePopup.style.maxHeight) {
