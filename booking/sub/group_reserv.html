@@ -1,167 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eight Fore</title>
 
     <!-- font -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+
     <!-- css -->
-    <link rel="stylesheet" href="/booking/css/common.css">
-    <link rel="stylesheet" href="/booking/css/sub.css">
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/booking/css/common.css" />
+    <link rel="stylesheet" href="/booking/css/sub.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 
     <!-- js -->
     <script src="/booking/js/jquery-3.6.1.min.js"></script>
     <script src="/booking/js/script.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div id="wrap">
-        <header id="header">
-        </header>
+      <header id="header"></header>
 
+      <div id="main">
+        <section id="title">
+          <div class="inner">
+            <h3>Group</h3>
 
-        <div id="main">
-            <section id="title">
-                <div class="inner">
-                    <h3>Group</h3>
+            <select class="select_box">
+              <option selected>단체예약</option>
+              <option>(단체연수후기)</option>
+            </select>
+          </div>
+        </section>
 
-                    <select class="select_box">
-                        <option selected>단체예약</option>
-                        <option>(단체연수후기)</option>
-                    </select>
-                </div>
-            </section>
+        <section id="content">
+          <div class="content_group back_gray">
+            <div class="content_txt inner">
+              <h4>단체견적문의</h4>
+              <p>
+                30인 이상 기업 및 단체 예약 시 단체견적문의서를 작성해주세요.
+              </p>
+              <p>
+                *바로 예약하실 분은
+                <a href="/booking/sub/room_1reserv_1.2.html">개인 예약 페이지</a
+                >로 이동해 주세요.
+              </p>
+            </div>
+            <div class="content_call">
+              <div class="max_inner">
+                <h4>고객문의</h4>
+                <p>1588-0000</p>
+                <div class="telicon"><i class="bi bi-telephone-fill"></i></div>
+              </div>
+            </div>
+            <div class="content_form">
+              <div class="inner">
+                <div class="reserv_form">
+                  <h4>단체예약 견적문의서</h4>
 
-            <section id="content">
-                <div class="content_group back_gray">
-                    <div class="content_txt inner">
-                        <h4>단체견적문의</h4>
-                        <p>30인 이상 기업 및 단체 예약 시 단체견적문의서를 작성해주세요.</p>
-                        <p>*바로 예약하실 분은 <a href="/booking/sub/room_1reserv_1.2.html">개인 예약 페이지</a>로 이동해 주세요.</p>
-                    </div>
-                    <div class="content_call">
-                        <div class="max_inner">
-                            <h4>고객문의</h4>
-                            <p>1588-0000</p>
-                            <div class="telicon"><i class="bi bi-telephone-fill"></i></div>
+                  <div class="reserv_list">
+                    <form class="rl_1">
+                      <div>
+                        <input type="radio" name="chk_info" value="HTML" /> 기업
+                      </div>
+                      <div>
+                        <input type="radio" name="chk_info" value="CSS" /> 기타
+                        단체/모임
+                      </div>
+                    </form>
+                  </div>
+
+                  <div class="reserv_list">
+                    <p>기업(단체)명</p>
+                    <form class="rl_2">
+                      <div>
+                        <input
+                          id="input1"
+                          type="text"
+                          placeholder="기업명(단체명)을 입력해주세요."
+                        />
+                      </div>
+                    </form>
+                  </div>
+
+                  <div class="reserv_list">
+                    <p>참여 인원 수</p>
+                    <form class="rl_2">
+                      <input
+                        id="input1"
+                        type="text"
+                        size="50"
+                        placeholder="참여 인원수를 입력해주세요."
+                      />
+                    </form>
+                  </div>
+
+                  <div class="reserv_list">
+                    <p>예약기간 및 숙박일수</p>
+                    <div class="date">
+                      <form>
+                        <div>
+                          <input id="input0" type="date" value="2023-03-20" />
+                          <p>-</p>
+                          <input id="input0" type="date" value="2023-03-20" />
                         </div>
+                      </form>
+                      <div><p>1박</p></div>
                     </div>
-                    <div class="content_form">
-                        <div class="inner">
-                            <div class="reserv_form">
-                                <h4>단체예약 견적문의서</h4>
-                                
-                                <div class="reserv_list">
-                                    <form class="rl_1">
-                                        <div><input type="radio" name="chk_info" value="HTML"> 기업</div>
-                                        <div><input type="radio" name="chk_info" value="CSS"> 기타 단체/모임</div>
-                                    </form>
-                                </div>
+                  </div>
 
-                                <div class="reserv_list">
-                                    <p>기업(단체)명</p>
-                                    <form class="rl_2">
-                                        <div><input id="input1" type="text" placeholder="기업명(단체명)을 입력해주세요."></div>
-                                    </form>
-                                </div>
+                  <div class="reserv_list">
+                    <p>연락처</p>
+                    <form>
+                      <div>
+                        <input
+                          id="input2"
+                          type="tel"
+                          size="10"
+                          pattern="[0-9]{3}"
+                          required
+                        />
+                        -
+                        <input
+                          id="input2"
+                          type="tel"
+                          size="10"
+                          pattern="[0-9]{4}"
+                          required
+                        />
+                        -
+                        <input
+                          id="input2"
+                          type="tel"
+                          size="10"
+                          pattern="[0-9]{4}"
+                          required
+                        />
+                      </div>
+                    </form>
+                  </div>
 
-                                <div class="reserv_list">
-                                    <p>참여 인원 수</p>
-                                    <form class="rl_2">
-                                        <input  id="input1" type="text" size="50" placeholder="참여 인원수를 입력해주세요.">
-                                    </form>
-                                </div>
+                  <div class="reserv_list">
+                    <p>E-MAIL</p>
+                    <form class="rl_2">
+                      <div>
+                        <input
+                          id="input1"
+                          type="email"
+                          pattern=".+@globex\.com"
+                        />
+                      </div>
+                    </form>
+                  </div>
 
-                                <div class="reserv_list">
-                                    <p>예약기간 및 숙박일수</p>
-                                    <div class="date">
-                                        <form>
-                                            <div><input id="input0" type="date" value="2023-03-20"><p>-</p><input id="input0" type="date" value="2023-03-20"></div>
-                                        </form>
-                                        <div><p>1박</p></div>
-                                    </div>
-                                </div>
+                  <div class="reserv_list">
+                    <p>옵션선택</p>
+                    <form class="rl_5">
+                      <div>
+                        <input type="checkbox" />
+                        <label for="scales">단체 바베큐</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" />
+                        <label for="scales">조식</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" />
+                        <label for="scales">중식</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" />
+                        <label for="scales">석식</label>
+                      </div>
+                    </form>
+                    <form class="rl_5">
+                      <div>
+                        <input type="checkbox" />
+                        <label for="scales">세미나룸</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" />
+                        <label for="scales">소운동장</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" />
+                        <label for="scales">체육대회 소품</label>
+                      </div>
+                    </form>
+                    <form class="rl_5">
+                      <div>
+                        <input type="checkbox" />
+                        <label for="scales">노래방</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" />
+                        <label for="scales">탁구장</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" />
+                        <label for="scales">당구장</label>
+                      </div>
+                    </form>
+                  </div>
 
-                                <div class="reserv_list">
-                                    <p>연락처</p>
-                                    <form>
-                                        <div><input id="input2" type="tel" size="10" pattern="[0-9]{3}" required> - <input id="input2" type="tel" size="10" pattern="[0-9]{4}" required> - <input id="input2" type="tel" size="10" pattern="[0-9]{4}" required></div>
-                                    </form>
-                                </div>
-
-                                <div class="reserv_list">
-                                    <p>E-MAIL</p>
-                                    <form class="rl_2">
-                                        <div><input id="input1" type="email" pattern=".+@globex\.com"></div>
-                                    </form>
-                                </div>
-                                
-                                <div class="reserv_list">
-                                    <p>옵션선택</p>
-                                    <form class="rl_5">
-                                        <div><input type="checkbox">
-                                        <label for="scales">단체 바베큐</label></div>
-                                        <div><input type="checkbox">
-                                        <label for="scales">조식</label></div>
-                                        <div><input type="checkbox">
-                                        <label for="scales">중식</label></div>
-                                        <div><input type="checkbox">
-                                        <label for="scales">석식</label></div>
-                                    </form>
-                                    <form class="rl_5">
-                                        <div><input type="checkbox">
-                                        <label for="scales">세미나룸</label></div>
-                                        <div><input type="checkbox">
-                                        <label for="scales">소운동장</label></div>
-                                        <div><input type="checkbox">
-                                        <label for="scales">체육대회 소품</label></div>
-                                    </form>
-                                    <form class="rl_5">
-                                        <div><input type="checkbox">
-                                        <label for="scales">노래방</label></div>
-                                        <div><input type="checkbox">
-                                        <label for="scales">탁구장</label></div>
-                                        <div><input type="checkbox">
-                                        <label for="scales">당구장</label></div>
-                                    </form>
-                                </div>
-
-                                <div class="reserv_list">
-                                    <p>기타문의사항</p>
-                                    <form>
-                                        <div><textarea id="question" rows="8"></textarea></div>
-                                    </form>
-                                </div>
-                            </div>
-
-                            <div class="btn_long">
-                                <div class="btn0">
-                                    <a href="#">단체예약 문의하기</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- content_form --> 
+                  <div class="reserv_list">
+                    <p>기타문의사항</p>
+                    <form>
+                      <div><textarea id="question" rows="8"></textarea></div>
+                    </form>
+                  </div>
                 </div>
-            </section>
-        </div><!-- main -->
 
-        <footer id="footer">
-        </footer>
-    </div><!-- wrap -->
+                <div class="btn_long">
+                  <div class="btn0">
+                    <a href="#">단체예약 문의하기</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- content_form -->
+          </div>
+        </section>
+      </div>
+      <!-- main -->
 
-    <div id="navCommonMain" class="nav">
-    </div><!--nav-->
+      <footer id="footer"></footer>
+    </div>
+    <!-- wrap -->
+
+    <div id="navCommonMain" class="nav"></div>
+    <!--nav-->
 
     <script src="/booking/js/header.js"></script>
     <script src="/booking/js/footer.js"></script>
     <script src="/booking/js/nav.js"></script>
-</body>
+  </body>
 </html>
